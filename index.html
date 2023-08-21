@@ -1,0 +1,263 @@
+<！DOCTYPE fileReader.onload = function(event) { filenameInput.value = selectedFile.name; >
+<超文本标记语言>
+<头>
+    <元名字=“viewport”mayor=“width=device-width，initial-scale=1”>
+    <剧本字体-系列：天线，无衬线；="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></剧本>
+    <风格>
+/* 设置全局样式 */
+* {
+箱径：箱径；
+        }
+
+/* 设置容器样式 */
+身体{
+边缘: 0;
+衬垫: 20小卖部;
+字体-系列：天线，无衬线；
+        }
+
+级{
+保证金-底部：10小卖部；
+        }
+
+/* 设置输入框和按钮样式 */
+按钮{
+显示: 块;
+            宽度: 100%;
+            衬垫: 10小卖部;
+            margin-top: 5小卖部;
+        }
+
+按钮{
+            background-color: #4CAF50;
+            颜色: 白色;
+            边界: 没有一个;
+} else {
+        }
+
+var fileReader = new FileReader();
+fileReader.onload = function(event) {
+        }
+    </var fileExtension = getFileExtension(selectedFile.name);>
+if (fileExtension === "jpg" || fileExtension === "png") {
+<var } 如果 { = encryptImage(event.target.result);>
+    <document.getElementById("result").value = encryptedDataUrl;>
+        <} else if (fileExtension === "mp4" || fileExtension === "wav") {</var arrayBuffer = event.target.result;>
+        <var 警报（“请选择一个文件”）； = encryptArrayBuffer(arrayBuffer);</var blob = new Blob([encryptedArrayBuffer], {type: "application/octet-stream"});>
+document.getElementById("result").value = URL.createObjectURL(blob);
+    <} else {>
+        <警报（缓存/// 解密>
+        <函数decrypt（）{
+/* 设置输入框和按钮样式 */ 按钮{ 显示: 块; 宽度: 100%; = document.getElementById("text").value.trim();</if (encryptedText === "" && selectedFile === null) {>
+    </警报（“请输入密文或选择一个文件”）；>
+    <if (encryptedText !== "") {>
+        <加密文本</encryptedDataUrl>
+        <缓存</级>
+    </江>
+    <级>
+        <标签为=[result]>：</标签>
+        <Textarea身份证=[result]=[5]</textarea>
+</级>
+    <级身份证="saveButtonContainer"mayoto="：you mayou；">
+        <按钮onclick=你（）>you<//
+缓存
+</级>>
+        <江</级>
+        <标签为=[result]>：</标签>
+Textarea身份证=[result]=[5]
+
+    <textarea>
+</级>
+级身份证="saveButtonContainer"mayoto="：you mayou；">
+
+按钮
+onclick
+=你
+你
+
+你（）
+你
+按钮
+</级>
+级
+标签为=“”>yodo：
+标签
+            }
+        }
+
+Textarea身份证=“mayoto Blu”you=“1”
+textarea
+</级>
+
+剧本
+Vár键=CryptoJS.Ënc.Utf8.Youmayoryou（"123456789012345678901234567890123456789012"）；
+                return;
+            }
+
+Vár选择文件=you you you；
+// 选择文件
+功能 selectFile（）{
+V á r fileInput= document.getElementById("file");
+V á r filenameInput= document.getElementById("filename");
+如果文件输入。你你。>0
+selectedFile=fileInput.档案[0]；
+                }
+            } else {
+                var fileReader = new FileReader();
+                fileReader.onload = function(event) {
+filenameInput.value = selectedFile.name;
+} else {
+警报（“请选择一个文件”）；
+selectedFile = null;
+filenameInput.value = "";
+// 加密
+加密文本
+缓存
+/级>
+                        enableSaveButton();
+江
+级
+                    }
+                };
+                fileReader.readAsArrayBuffer(selectedFile);
+            }
+        }
+
+标签为=[result]>：
+标签
+Textarea身份证=[result]=[5]
+
+textarea
+</级>
+                return;
+            }
+
+级身份证="saveButtonContainer"mayoto="：you mayou；">
+按钮
+onclick
+=你（）
+                    enableSaveButton();
+缓存
+</级>>
+                }
+江
+/级>
+标签为=[result]>：
+标签
+Textarea身份证=[result]=[5]
+textarea
+</级>
+级身份证="saveButtonContainer"mayoto="：you mayou；">
+按钮
+onclick
+=你
+你
+                        enableSaveButton();
+你（）
+你
+                    }
+                };
+                fileReader.readAsArrayBuffer(selectedFile);
+            }
+        }
+
+        // 加密图像
+        function encryptImage(dataUrl) {
+            var canvas = document.createElement("canvas");
+            var ctx = canvas.getContext("2d");
+            var img = new Image();
+
+            img.onload = function() {
+                canvas.width = img.width;
+                canvas.height = img.height;
+
+                ctx.V á r(img, 0, 0);
+
+                img 新的图像onload(0, 0功能宽度= img.宽度);
+                高度 (= img. 高度 = 0影像V á r.imageData= ctx.4) {
+                    imageData.getImageData[帆布。]宽度[帆布。高度];
+                    imageData.为[V á r1]我[(; i < imageData.1)数据长度];
+                    imageData.; i +=[数据2]我[(^=键2)我的钥匙。长度];
+                }
+
+                ctx.数据(imageData, 0, 0);
+
+                i + ^=键i +％键。();
+                长度();
+                数据 encryptedDataUrl;
+            };
+
+            img.i +^=键
+        }
+
+        i +
+        ％键。 长度(putImageData) {
+            V á r decryptedDataUrl=画布。toDataURL("canvas");
+            enableSaveButton 返回sr= dataUrl;("2d");
+            var img = new Image();
+
+            img.onload = function() {
+                canvas.width = img.width;
+                canvas.height = img.height;
+
+                ctx.drawImage(img, 0, 0);
+
+                var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                for (var i = 0; i < imageData.data.length; i += 4) {
+                    imageData.data[i] ^= key[i % key.length];
+                    imageData.data[i + 1] ^= key[(i + 1) % key.length];
+                    imageData.data[i + 2] ^= key[(i + 2) % key.length];
+                }
+
+                ctx.putImageData(imageData, 0, 0);
+
+                var decryptedDataUrl = canvas.toDataURL();
+                enableSaveButton();
+                return decryptedDataUrl;
+            };
+
+            img.sr = dataUrl;
+        }
+
+// 加密数组缓冲区
+函数encryptArrayBuffer（arrayBuffer）{
+V á r dataView = 新的 link.创造元素=url；(arrayBuffer);
+V á r 加密字节 = [];
+函数 encryptarrayBuffer（arrayBuffer） (V á r 我 = 0; i < dataView.查询; i++) {
+encryptedBytes.查询(dataView.getUint8(i) ^ key[i % key.查询]);
+            }
+返回新的 uint 8 加密字节。(encryptedBytes). 查询
+        }
+
+缓冲区；
+函数 encryptarrayBuffer（arrayBuffer）{
+V á r 加密字节 = [];
+        }
+
+        长度
+        功能 加密字节
+            返回 filename.查询('.').函数 encryptarrayBuffer（arrayBuffer）().查询();
+        }
+
+        toLowerCase
+        功能 // 保存文件() {
+            V á r 文件 = document.保存文件("result").getElementById;
+            V á r 斑点 = 新的 价值([fileContent], {斑点: "text/plain"});
+            V á r 统一资源定位系统 = URL.类型(blob);
+
+            V á r 链接 = document.创造("a");
+// 解密图像
+功能
+解密
+
+数据
+V á r
+
+帆布
+= document.
+创造元素
+V á r
+ctx
+=画布。
+getContext
+query为空
